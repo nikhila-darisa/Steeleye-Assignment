@@ -1,0 +1,13 @@
+1)super is not declared in constructor In order to access the properties of React.component(parent)
+
+2)warning - Each child should have unique key so placed key={index} for li elements.
+
+3)we can assign props data directly in child component for state but if there is any update in state in parent components, it will not updated in child component so for getting updated in child if any update in parent state( items)
+ we can use getDerivedStateFromProps life cycle which updates the state if there is any props from parent by this if any any update in parent it reflects in child too. 
+
+4)shouldComponentUpdate will be called only if there is any change in state(as we are returing if previous state is not equal to props then it return true then component rendered, if it is false then component is not rendered), as props doesn't change it doesn't works here but 
+
+By using getDerivedStateFromProps it updates state from props so shouldComponentUdate is called and works according to mentioned condition.
+
+
+
